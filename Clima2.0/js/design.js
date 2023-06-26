@@ -49,7 +49,7 @@ function cambiarImg(value){
 }
 
 function consultaCountry(pais) {
-  const apiKey = "";
+  const apiKey = "315b48071bcfb2f5bff7f06ed07dbe0f";
   const url = `http://api.openweathermap.org/data/2.5/weather?q=${pais}&appid=${apiKey}`;
 
   fetch(url)
@@ -73,7 +73,8 @@ function consultaCountry(pais) {
     })
     .catch(error => {
       console.log('Error:', error);
-      first.textContent = error.message;
+      first.innerText = 'Error';
+      image.src='./img/joker.png'
     });
 }
 
